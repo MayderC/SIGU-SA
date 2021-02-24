@@ -1,0 +1,152 @@
+:root{
+    --Black: rgb(56, 56, 56);
+    --background: rgb(255, 255, 255);
+    --verde:  #464646;
+    --azul: #047a0e;
+    --titulo: #29ca31;
+}   
+
+
+
+
+.title{
+    font-weight: bold;
+    font-size: 30px;
+    color:var(--titulo);
+    margin-right: 40px;
+
+}
+.title__span{
+    font-size: 16px;
+    font-weight: lighter;
+    color: var(--Black);
+    margin-left: 40px;
+}
+.nav__link{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--Black);
+    font-weight: bold;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    padding: 0 17px;
+}
+.nav__link:hover{
+    color: #3759D4;
+    border-top: 5px #3759D4 solid;
+    height: 45px;
+    font-weight: 600;
+}
+.item__lista{
+    display: flex;
+    height: 100%;
+    text-align: center;
+    white-space:nowrap;
+}
+.item__lista > li{
+    width: 100%;
+}
+.nav{
+    max-width: 100%;
+    background-color: rgb(241, 241, 241);
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+    color: var(--Black);
+}
+.nav__content{
+    display: flex;
+    align-items: center;
+}
+.nav__content--title{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+.nav__content--link{
+    display: flex;
+    width: 30%;
+    justify-content:flex-end;
+}
+
+.btn__menu{
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 12px;
+    right: 17px;
+}
+
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.header__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+    width: 400px;
+    padding: 0 50px;
+}
+
+.header__img--cam{
+    max-width: 100%;
+}
+
+.item__logo{
+    
+}
+
+.svg_animate{
+    width: 50%;
+    height: 500px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 660px){
+    .item__lista{
+        display: block;
+        visibility: visible;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+
+        z-index: 1;
+    }    
+    .nav{
+        display: block;
+        padding: 0;
+    }
+    .nav__content--link{
+        width: 100vw;
+    }
+
+    .title{
+        padding: 0 17px;
+    }
+
+    .nav__content--title{
+        height: 55px;
+    }
+
+    .item__logo{
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 1004px) {
+    .header__item{
+        height: 400px;
+    }
+    .title__span{
+        display: none;
+    }
+
+}

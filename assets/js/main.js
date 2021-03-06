@@ -40,7 +40,7 @@ function menuResponsive(){
     let lista = document.getElementById('lista')
     boton.onclick = function(){
 
-      lista.classList.toggle('show_menu')
+        lista.classList.toggle('show_menu')
 
     }
 

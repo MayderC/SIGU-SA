@@ -23,15 +23,13 @@ function moveImg(){
     }, 1500);
 }
 
+
 //Evento disparador de la función anterior...
 img_dom.onmouseover = (e) =>{
-  
     if(!bandera){
         moveImg()
     }
-
 }
-
 
 
 function menuResponsive(){
@@ -43,12 +41,25 @@ function menuResponsive(){
         lista.classList.toggle('show_menu')
 
     }
-
-
 }
 
 
 
+
+function addEvent(){
+    let listas = [... document.querySelectorAll('.nav__link')]
+
+    listas.forEach(lista => {
+        lista.onclick = function(e){
+            let flag = document.getElementById('lista').classList.contains('show_menu')
+            
+            if(flag){
+                document.getElementById('lista').classList.toggle('show_menu')
+            }
+
+        }
+    })
+}
 
 
 
@@ -105,4 +116,5 @@ if(match_list.matches){
 }
 
 
+addEvent();
 menuResponsive()

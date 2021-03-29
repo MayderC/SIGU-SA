@@ -23,14 +23,14 @@ function moveImg(){
     }, 1500);
 }
 
-
 //Evento disparador de la función anterior...
-img_dom.onmouseover = (e) =>{
-    if(!bandera){
-        moveImg()
+if(img_dom != null){
+    img_dom.onmouseover = (e) =>{
+        if(!bandera){
+            moveImg()
+        }
     }
 }
-
 
 function menuResponsive(){
 
@@ -42,9 +42,6 @@ function menuResponsive(){
 
     }
 }
-
-
-
 
 function addEvent(){
     let listas = [... document.querySelectorAll('.nav__link')]
@@ -61,21 +58,12 @@ function addEvent(){
     })
 }
 
-
-
-
-
-
-
-
-
 /* Quitar border top cuando esta pequeña la pantalla y activar cuando esta grande. */
 /* Pasos:
 1. Ver en que tamaño estoy. variable bandera que indique si esta activo el modo responsive o no.
 2. si esta activo, quitar top border y agrandar alto del elemento lista.
 3. si esta desactivado, colocar border-top al elemento li.
 */
-
 
 const list_li = [...document.getElementsByClassName('nav__link')]
 function changeBorderList(obj){
@@ -105,7 +93,6 @@ window.addEventListener('resize', ()=>{
 
 })
 
-
 if(match_list.matches){
     let obj = {border: '0px', height: '55px'}
     changeBorderList(obj)
@@ -114,7 +101,6 @@ if(match_list.matches){
     let obj = {border: "", height: ""}
     changeBorderList(obj)
 }
-
 
 addEvent();
 menuResponsive()

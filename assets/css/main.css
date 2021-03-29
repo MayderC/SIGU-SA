@@ -176,7 +176,7 @@
     flex-direction: column;
     justify-content: center;
 }
-img{
+.content__item img{
     height: 250px;
     border-radius: 15px;
     -moz-border-radius: 15px;

@@ -37,6 +37,7 @@
     border-top: 5px #3759D4 solid;
     height: 45px;
     font-weight: 600;
+    transition: .2s
 }
 .item__lista{
     display: flex;
@@ -124,6 +125,7 @@
 
 .header__img--cam{
     max-width: 100%;
+    transition: .2s;
 }
 
 .svg_animate{
